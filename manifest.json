@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "EIS Quick Login",
+  "version": "2.1.0",
+  "description": "One-click EIS login: saves your LDAP login and grid card in this browser, fills the login and grid steps, and lands you on the EIS home page.",
+  "permissions": ["storage", "clipboardWrite"],
+  "host_permissions": ["https://eis.cdot.in/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "EIS Quick Login",
+    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://eis.cdot.in/*"],
+      "js": ["shared.js", "content.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}
