@@ -9,6 +9,7 @@ Install
 First time
 - Click the icon, save your LDAP user id and password.
 - Paste your grid card (A-40 B-15 ... H-50) and save. Or skip it: the grid step will ask once.
+- Grid card is copiable from grid chrome extension. Use 'copy-all' and paste it directly.
 
 Layout
 - Home: LOGIN button on top, quick-open tiles for HOME / PUNCH / SALARY / LEAVE / BIO,
